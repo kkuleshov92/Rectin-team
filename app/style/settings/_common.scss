@@ -1,7 +1,7 @@
 $mainColor: #FBE446;
 
 body {	
-	font-family: 'Roboto', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
 	color: #000;
@@ -40,6 +40,8 @@ svg {
 .title {	
 	font-size: 60px;
 	line-height: 1.3;
+	font-weight: 700;
+	text-align: center;
 	@include r(1219){
 		font-size: 56px;
 	}
