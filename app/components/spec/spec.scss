@@ -1,19 +1,212 @@
-@media (max-width: 1219px) {
+.spec {
+    background: url(../img/spec-bg.jpg)no-repeat center center / cover;
+    color: #fff;
+    padding-top: 81px;
+    padding-bottom: 122px;
 
+    &__slider {
+        margin-top: 135px;
+        position: relative;
+    }
+
+    &__title {
+        span {
+            color: $mainColor;
+        }
+    }
+
+    &__top {
+        display: flex;
+        background: #46579f;
+        padding-top: 16px;
+        padding-left: 30px;
+        border-radius: 35px 0;
+        justify-content: space-between;
+    }
+
+    &__main-slide {
+        display: flex;
+        position: relative;
+
+        &::before {
+            content: '';
+            background: #5669b7;
+            width: 1px;
+            height: 92px;
+            position: absolute;
+            right: 0;
+            margin-top: 10px;
+        }
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__person {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__head {
+        margin-left: 63px;
+        width: 296px;
+        margin-top: 13px;
+    }
+
+    &__name {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &__prof {
+        font-size: 20px;
+        color: #fbe446;
+        font-style: italic;
+        margin-top: 10px;
+        line-height: 1.1;
+    }
+
+    &__text {
+        font-size: 20px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__img-box {
+        font-size: 0;
+
+        &_dis {
+            &:nth-child(1) {
+                margin-right: 30px;
+            }
+
+            &:nth-child(2) {
+                margin-right: 56px;
+            }
+
+            img {
+                opacity: .35;
+                height: 120px;
+                cursor: pointer;
+                border-radius: 20px 0;
+                transition: .3s;
+
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+
+        &.active {
+            position: relative;
+            margin-top: -75px;
+
+            img {
+                border-radius: 35px 0;
+                z-index: 1;
+                position: relative;
+                opacity: 1;
+                height: 211px;
+            }
+
+            &::before {
+                content: '';
+                background: #fff;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 10px;
+                left: 10px;
+                border-radius: 35px 0;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__content-box {
+        margin-top: 43px;
+        width: 770px;
+        padding-left: 40px;
+        padding-right: 40px;
+        line-height: 1.6;
+        position: relative;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 35px;
+        right: 55px;
+    }
+
+    &__nav {
+        display: flex;
+        position: absolute;
+        top: -70px;
+        right: 56px;
+        width: 109px;
+        justify-content: space-between;
+    }
+
+    &__arr {
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        background: #46579f;
+        transition: .3s;
+        cursor: pointer;
+        position: relative;
+
+        &_right {
+            transform-origin: 50% 50%;
+            transform: rotate(180deg);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            background: #fff;
+            height: 2px;
+            width: 13px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        &::before {
+            transform: rotate(-45deg) translateY(-9px) translateX(-2px);
+        }
+
+        &::after {
+            transform: rotate(45deg) translateY(8px) translateX(-3px);
+        }
+
+        &:hover {
+            background: #fbe446;
+
+            &::before,
+            &::after {
+                background: #040401;
+            }
+        }
+    }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1219px) {}
 
-}
+@media (max-width: 1023px) {}
 
-@media (max-width: 767px) {
+@media (max-width: 767px) {}
 
-}
+@media (max-width: 639px) {}
 
-@media (max-width: 639px) {
-
-}
-
-@media (max-width: 479px) {
-    
-}
+@media (max-width: 479px) {}

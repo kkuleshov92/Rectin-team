@@ -72,3 +72,22 @@ svg {
 	white-space: nowrap;
 }
 
+.btn {
+	font-size: 30px;
+	color: #fff;
+	font-weight: 700;
+	background: linear-gradient(to bottom, #ff7600, #ff4e00);
+	display: flex;
+	align-items: center;
+	height: 62px;
+	border-radius: 30px;
+	justify-content: center;
+	width: 308px;
+	cursor: pointer;
+	transition: .3s;
+	box-shadow: 0 10px 5px rgba(255, 118, 0, .2);
+
+	&:hover {
+		box-shadow: none;
+	}
+}
