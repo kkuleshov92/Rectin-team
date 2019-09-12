@@ -73,6 +73,7 @@
     &__text {
         font-size: 20px;
         display: none;
+        min-height: 128px;
 
         &.active {
             display: block;
@@ -200,6 +201,7 @@
         }
     }
 }
+
 
 @media (max-width: 1219px) {}
 
