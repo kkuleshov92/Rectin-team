@@ -48,7 +48,6 @@
             specMainFace.style.opacity = '.1';
             let n = .3;
 
-
             let appearance = function (element = specMainFace) {
                 element.style.opacity = n + '';
                 n += .05;
@@ -79,6 +78,4 @@
         personList[num - 1].classList.add('active');
         textList[num - 1].classList.add('active');
     }
-
-
 }

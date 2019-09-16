@@ -203,12 +203,239 @@
 }
 
 
-@media (max-width: 1219px) {}
+@media (max-width: 1219px) {
+    .spec {
+        &__head {
+            margin-left: 30px;
+            width: 270px;
+            padding-right: 30px;
+        }
 
-@media (max-width: 1023px) {}
+        &__top {
+            padding-top: 0;
+        }
 
-@media (max-width: 767px) {}
+        &__main-slide {
+            &::before {
+                right: 25px;
+            }
+        }
 
-@media (max-width: 639px) {}
+        &__item {
+            display: flex;
+            align-items: center;
+        }
 
-@media (max-width: 479px) {}
+        &__name {
+            font-size: 28px;
+        }
+
+        &__prof {
+            font-size: 18px;
+        }
+
+        &__img-box {
+            &.active {
+                width: 280px;
+                img {
+                    height: auto;
+                }
+            }
+
+            &_dis {
+                img {
+                    height: auto;
+                }
+
+                &:nth-child(2) {
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        &__text {
+            min-height: 160px;
+        }
+
+        &__content-box {
+            width: 570px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .spec {
+        &__item {
+            display: none;
+        }
+
+        &__main-slide {
+            width: 100%;
+            &::before {
+                display: none;
+            }
+        }
+
+        &__top {
+            padding: 0 50px;
+        }
+
+        &__head {
+            width: auto;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            width: 370px;
+        }
+
+        &__content-box {
+            width: 100%;
+        }
+
+        &__btn {
+            position: static;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .spec {
+        &__top {
+            padding: 0px 50px;
+        }
+
+        &__head {
+            padding: 20px 0;
+        }
+
+        &__img-box {
+            &.active {
+                margin-top: -30px;
+            }
+        }
+
+        &__slider {
+            margin-top: 90px;
+        }
+
+        &__btn {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 639px) {
+    .spec {
+        &__main-slide {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__img-box {
+            &.active {
+                margin-top: 20px;
+            }
+        }
+
+        &__head {
+            width: 100%;
+            margin: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__name {
+            text-align: center;
+        }
+
+        &__prof {
+            text-align: center;
+            min-height: 38px;
+        }
+
+        &__content-box {
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        &__nav {
+            top: 100px;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 20px;
+        }
+
+        &__slider {
+            margin-top: 20px;
+        }
+
+        &__arr {
+            border: 1px solid $mainColor
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .spec {
+        &__top {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        &__img-box {
+            &.active {
+                width: auto;
+
+                &::before {
+                    display: none;
+                }
+
+                img {
+                    width: 190px;
+                }
+            }
+        }
+
+        &__head {
+            padding: 10px 0;
+        }
+
+        &__name {
+            font-size: 22px;
+        }
+
+        &__prof {
+            font-size: 16px;
+        }
+
+        &__nav {
+            top: 20px;
+            padding: 0 10px;
+            width: 300px;
+            top: 70px;
+        }
+
+        &__arr {
+            width: 35px;
+            height: 35px;
+
+            &::after,
+            &::before {
+                width: 10px;
+            }
+
+            &::after {
+                top: 45%;
+            }
+        }
+
+        &__text {
+            font-size: 18px;
+            width: 300px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    }
+}
