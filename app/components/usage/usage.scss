@@ -1,19 +1,40 @@
-@media (max-width: 1219px) {
+.usage {
+
+    &__item {
+        position: relative;
+
+        &::before {
+            content: '';
+            background: $mainColor;
+            border-radius: 50%;
+            height: 36px;
+            width: 36px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+
+        span {
+            color: #122267;
+            font-weight: 700;
+        }
+
+
+    }
 
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1219px) {}
 
-}
+@media (max-width: 1023px) {}
 
-@media (max-width: 767px) {
+@media (max-width: 767px) {}
 
-}
+@media (max-width: 639px) {}
 
-@media (max-width: 639px) {
-
-}
-
-@media (max-width: 479px) {
-    
-}
+@media (max-width: 479px) {}
