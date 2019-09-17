@@ -1,19 +1,132 @@
-@media (max-width: 1219px) {
+.call {
 
+    &__box {
+        display: flex;
+        padding-top: 69px;
+        justify-content: space-between;
+        padding-bottom: 76px;
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 0;
+            width: 0;
+            border-width: 21px 21px 0 21px;
+            border-color: #3356a8 transparent transparent transparent;
+            border-style: solid;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: -1px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        width: 70px;
+        margin-top: 5px;
+        font-size: 0;
+    }
+
+    &__text {
+        font-size: 22px;
+        width: 700px;
+        padding-left: 29px;
+        line-height: 1.2;
+        
+        a {
+            text-decoration: underline;
+            color: #000;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__btn {
+        width: 370px;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 1219px) {
+    .call {
+        &__text {
+            width: 530px;
+            padding: 0 25px;
+        }
+    }
 }
 
 @media (max-width: 1023px) {
+    .call {
+        &__box {
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
 
+            &::before {
+                display: none;
+            }
+        }
+
+        &__text {
+            width: 620px;
+        }
+
+        &__btn {
+            margin-top: 20px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
+    .call {
+        &__text {
+            width: 550px;
+        }
 
+        &__btn {
+            width: 290px;
+        }
+    }
 }
 
 @media (max-width: 639px) {
+    .call {
+        &__img {
+            width: 60px;
+        }
 
+        &__text {
+            width: 390px;
+            padding: 0 15px;
+        }
+    }
 }
 
 @media (max-width: 479px) {
-    
+    .call {
+
+        &__left {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text {
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__btn {
+            margin-top: 0;
+        }
+    }
 }
