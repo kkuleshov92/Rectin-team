@@ -95,9 +95,13 @@ svg {
 	width: 308px;
 	cursor: pointer;
 	transition: .3s;
-	box-shadow: 0 10px 5px rgba(255, 118, 0, .2);
+	box-shadow: 0 2px 0 #e04600, 0 10px 5px rgba(52,70,125,.2);
 
 	&:hover {
+		box-shadow: 0 2px 0 #e04600;
+	}
+
+	&:active {
 		box-shadow: none;
 	}
 
