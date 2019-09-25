@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'digital';
+    src: url(../fonts/digital.ttf);
+}
+
+.jam {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        background: $mainColor;
+        position: relative;
+        flex-wrap: wrap;
+
+        &::before {
+            content: '';
+            background: $mainColor;
+            width: 174px;
+            height: 60px;
+            position: absolute;
+            right: -174px;
+            border-radius: 0 0 55px 0;
+        }
+
+        &::after {
+            content: '';
+            background: $mainColor;
+            position: absolute;
+            height: 60px;
+            width: 100%;
+            right: 100%;
+        }
+    }
+
+    &__links {
+        display: flex;
+        margin-left: 173px;
+    }
+    
+    &__item {
+        padding-left: 40px;
+        
+
+        &_1 {
+            background: url(../img/jam1.png)no-repeat center left / contain;
+        }
+
+        &_2 {
+            background: url(../img/jam2.png)no-repeat center left / contain;
+            margin-left: 48px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        color: #000;
+        display: inline-block;
+        border-bottom: 1px dotted #000;
+        line-height: 26px;
+        transition: .3s;
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+
+    &__quick {
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: 71px;
+    }
+
+    &__timer {
+        display: flex;
+        margin-left: 15px;
+        margin-top: 3px;
+
+        span {
+            font-size: 30px;
+            font-family: 'digital';
+            display: inline-block;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+
+            &::before {
+                content: '0';
+                font-size: 30px;
+                color: #f0f0f0;
+                text-align: center;
+                position: absolute;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__hours,
+    &__minutes,
+    &__seconds {
+        background: #fff;
+        width: 38px;
+        height: 30px;
+        font-size: 0;
+    }
+
+    &__minutes {
+        margin-left: 15px;
+    }
+
+    &__hours,
+    &__minutes {
+        position: relative;
+
+        &::before {
+            content: ':';
+            position: absolute;
+            font-size: 30px;
+            font-family: 'digital';
+            right: -14px;
+        }
+    }
+
+    &__seconds {
+        margin-left: 15px;
+    }
+
+    &__btn {
+        font-size: 20px;
+        width: 130px;
+        height: 35px;
+        margin-left: auto;
+        box-shadow: 0 2px 0 #e04600;
+    }
+}
+
+
+@media (max-width: 1219px) {
+    .jam {
+        background: $mainColor;
+        width: 100%;
+
+        &__links {
+            margin-left: 50px;
+        }
+
+        &__quick {
+            margin-left: 30px;
+        }
+
+        &__item {
+
+            &_2 {
+                margin-left: 20px;
+            }
+        }
+
+        &__nav {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .jam {
+        &__links {
+            margin-left: 30px;
+        }
+
+        &__quick {
+            display: none;
+        }
+
+        &__timer {
+            margin-left: 40px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .jam {
+        &__nav {
+            justify-content: space-between;
+        }
+
+        &__links {
+            display: none;
+        }
+
+        &__timer {
+            margin: 0;
+        }
+
+        &__btn {
+            margin: 0;
+        }
+
+        &__quick {
+            display: block;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 639px) {
+    .jam {
+        &__quick {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .jam {
+        padding: 10px 0;
+
+        &__logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__nav {
+            height: auto;
+        }
+
+        &__timer,
+        &__btn {
+            display: none;
+        }
+    }
+}

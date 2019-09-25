@@ -1,7 +1,168 @@
 <!-- HEADER START -->
 <header class="header">
     <div class="container">
+        <div class="header__left">
+            <h1 class="title header__title">
+                Избавься от&nbsp;геморроя
+            </h1>
+            <p class="header__info">
+                в домашних условиях
+            </p>
+            <ul class="header__list">
+                <li class="header__item">
+                    <div class="header__circle"></div>
+                    <div class="header__text">
+                        <strong>Снимает</strong> <br>воспаление и&nbsp;боль
+                        <span class="header__after">
+                            после 2 применений
+                        </span>
+                    </div>
+                </li>
+                <li class="header__item header__item_2">
+                    <div class="header__circle"></div>
+                    <div class="header__text">
+                        <strong>Устраняет</strong> <br>трещины и&nbsp;отечность
+                        <span class="header__after">
+                            после 3 применений
+                        </span>
+                    </div>
+                </li>
+                <li class="header__item header__item_3">
+                    <div class="header__circle"></div>
+                    <div class="header__text">
+                        <strong>Предотвращает</strong> <br>возвращение геморроя
+                        <span class="header__after">
+                            после прохождения курса
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="header__img-prod">
+            <img src="./img/main-pack.png" alt="Rectin" class="header__main-img">
+            <img src="./img/prod.png" alt="Rectin" class="header__extra-img">
+        </div>
+        <div class="header__form-box">
+            <form action="/submit" method="POST" class="header__form form">
+                <div class="form__title-box">
+                    <h3 class="form__title">
+                        Только сегодня скидка
+                    </h3>
+                    <div class="form__disc">
+                        -50<span>%</span>
+                    </div>
+                    <div class="form__price-box">
+                        <div class="form__old-price">
+                            <span class="x_price_previous">999</span> <span class="x_currency">руб.</span>
+                        </div>
+                        <div class="form__new-price">
+                            <span class="x_price_current">400</span> <span class="x_currency">руб.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__inputs">
+                    <div class="form__name-input-box">
+                        <input type="text" required name="name" class="form__name-input"
+                            placeholder="Как к вам обратиться?">
+                    </div>
+                    <div class="form__phone-input-box">
+                        <div class="x_country_select">
+                            <select class="country-select" name="country_code">
+                                <option value="RU">Italia
+                                <option value="BY"> Francia
+                                <option value="UA" selected="selected">Spagna
+                                <option value="KZ">Germania
+                                <option value="KG">Romania
+                                <option value="GE">Polonia
+                                <option value="MD">Ungheria
+                                <option value="TH">Portogallo
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <div class="selected"></div>
 
+                            <div class="options"></div>
+                        </div>
+                        <input type="text" required placeholder="Ваш телефон" name="phone" class="form__phone-input">
+                    </div>
+
+                    <button class="btn form__btn">
+                        Заказать
+                    </button>
+                </div>
+                <div class="form__bottom">
+                    Осталось всего <span class="lastpack">23</span> упаковки Rectin! Не медли с покупкой!
+                </div>
+            </form>
+        </div>
     </div>
 </header>
 <!-- HEADER END -->
+
+
+
+<!-- POPUP START -->
+<div class="ever-popup-build">
+    <div class="my-popup" id="cloneThis">
+        <div class="popup__body popup">
+            <div class="popup__left">
+                <div class="popup__logo">
+                    <img src="./img/logo.png" alt="Rectin">
+                </div>
+                <h3 class="popup__title">
+                    Избавься от&nbsp;геморроя
+                </h3>
+                <p class="popup__text">
+                    в домашних условиях
+                </p>
+            </div>
+            <div class="popup__img-box">
+                <img src="./img/main-pack.png" alt="Rectin">
+            </div>
+            <div class="popup__form">
+                <form action="/submit" method="POST" class="form">
+                    <div class="form__price-box">
+                        <div class="form__old-price">
+                            <span class="x_price_previous">999</span> <span class="x_currency">руб.</span>
+                        </div>
+                        <div class="form__new-price">
+                            <span class="x_price_current">400</span> <span class="x_currency">руб.</span>
+                        </div>
+                    </div>
+                    <div class="form__inputs">
+                        <div class="form__name-input-box">
+                            <input type="text" required name="name" class="form__name-input"
+                                placeholder="Как к вам обратиться?">
+                        </div>
+                        <div class="form__phone-input-box">
+                            <div class="x_country_select">
+                                <select class="country-select" name="country_code">
+                                    <option value="RU">Italia
+                                    <option value="BY"> Francia
+                                    <option value="UA" selected="selected">Spagna
+                                    <option value="KZ">Germania
+                                    <option value="KG">Romania
+                                    <option value="GE">Polonia
+                                    <option value="MD">Ungheria
+                                    <option value="TH">Portogallo
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <div class="selected"></div>
+
+                                <div class="options"></div>
+                            </div>
+                            <input type="text" required placeholder="Ваш телефон" name="phone"
+                                class="form__phone-input">
+                        </div>
+
+                        <button class="btn form__btn">
+                            Заказать
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- POPUP END -->

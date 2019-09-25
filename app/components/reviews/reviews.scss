@@ -1,25 +1,308 @@
 .reviews {
+    padding-top: 91px;
+    padding-bottom: 150px;
+
     &__title {
-        color: $mainColor;
+        text-align: left;
+
+        span {
+            color: #0f216d;
+        }
+    }
+
+    &__info {
+        font-size: 24px;
+        color: #707070;
+        margin-top: 13px;
+
+        span {
+            color: #0f216d;
+        }
+    }
+
+    &__text-box {
+        margin-top: 48px;
+        padding-left: 41px;
+    }
+
+    &__name {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    &__city {
+        font-size: 18px;
+        font-style: italic;
+        color: #707070;
+        margin-top: 9px;
+    }
+
+    &__text {
+        font-size: 20px;
+        margin-top: 28px;
+        line-height: 1.6;
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 78px;
+        flex-wrap: wrap;
+    }
+
+    &__img-box {
+        position: relative;
+        height: 180px;
+        width: 270px;
+
+        &::before {
+            content: '';
+            height: 95%;
+            width: 100%;
+            background: #eceff6;
+            position: absolute;
+            top: 23px;
+            left: 15px;
+            z-index: 0;
+            border-radius: 35px 0;
+        }
+    }
+
+    &__img {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__item {
+        width: 370px;
+
+        &_1,
+        &_2 {
+            margin-right: 30px;
+        }
+    }
+
+    &__textarea-box {
+        margin-top: 58px;
+        position: relative;
+    }
+
+    &__textarea {
+        background: #eceff6;
+        border: 1px solid #e4e6ec;
+        border-radius: 30px 0;
+        width: 100%;
+        resize: none;
+        font-size: 22px;
+        padding: 15px 36px 40px;
+        font-family: 'PT Sans', sans-serif;
+        height: 187px;
+    }
+
+    &__btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        width: 288px;
     }
 }
 
 @media (max-width: 1219px) {
+    .reviews {
+        &__title {
+            font-size: 52px;
+        }
 
+        &__item {
+            width: 300px;
+
+            &_1,
+            &_2 {
+                margin-right: 20px;
+            }
+        }
+
+        &__text {
+            line-height: 1.4;
+            margin-top: 20px;
+        }
+
+        &__list {
+            margin-top: 40px;
+        }
+
+        &__text-box {
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+
+        &__textarea-box {
+            margin-top: 30px;
+        }
+    }
 }
 
 @media (max-width: 1023px) {
+    .reviews {
+        &__title {
+            text-align: center;
+            font-size: 48px;
+        }
 
+        &__info {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        &__item {
+            width: 355px;
+            margin: 0 15px;
+        }
+
+        &__text-box {
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        &__img-box {
+            margin: 0 auto;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &__textarea-box {
+            margin-bottom: 35px;
+        }
+
+        &__name {
+            text-align: center;
+        }
+
+        &__city {
+            text-align: center;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .slick-prev,
+        .slick-next {
+            border: 1px solid #46579f;
+            background: #46579f;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            transition: .3s;
+            cursor: pointer;
+            z-index: 10;
+            transform: none;
+
+            &::before,
+            &::after {
+                content: '';
+                background: #fff;
+                height: 2px;
+                width: 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                opacity: 1;
+            }
+
+            &::before {
+                transform: rotate(-45deg) translateY(-8px) translateX(-3px);
+            }
+    
+            &::after {
+                transform: rotate(45deg) translateY(7px) translateX(-3px);
+            }
+
+            &:active,
+            &:hover {
+                background: #fbe446;
+                border-color: #fbe446;
+
+                &::after,
+                &::before {
+                    background: #46579f;
+                }
+            }
+
+        }
+
+
+
+        .slick-next {
+            transform-origin: 50% 50%;
+            transform: rotate(180deg);
+        }
+
+
+    }
 }
 
 @media (max-width: 767px) {
+    .reviews {
+        &__title {
+            font-size: 42px;
+        }
 
+        &__info {
+            font-size: 20px;
+        }
+    }
 }
 
 @media (max-width: 639px) {
-
+    .reviews {
+        &__title {
+            font-size: 36px;
+        }
+    }
 }
 
 @media (max-width: 479px) {
-    
+    .reviews {
+        &__title {
+            font-size: 32px;
+        }
+
+        &__info {
+            font-size: 18px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            top: 46%;
+        }
+
+        &__list {
+            margin-top: 20px;
+        }
+
+        &__btn {
+            position: static;
+            margin: 20px auto 0;
+            transform: none;
+        }
+
+        &__textarea-box {
+            margin-bottom: 0;
+        }
+
+        &__textarea {
+            height: 150px;
+        }
+    }
 }

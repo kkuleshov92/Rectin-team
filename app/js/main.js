@@ -1,4 +1,4 @@
-
+//=include ../components/jam/jam.js
 //=include ../components/header/header.js
 //=include ../components/reasons/reasons.js
 //=include ../components/ignor/ignor.js
