@@ -10,6 +10,10 @@
         line-height: 1.0;
         text-align: left;
         width: 770px;
+
+        span {
+            color: #112169;
+        }
     }
 
     &__list {
@@ -118,11 +122,13 @@
 
         &__item {
             &::before {
-                top: 8px;
+                top: 50%;
+                transform: translateY(-50%);
             }
 
             &::after {
-                top: 13px;
+                top: 50%;
+                transform: translateY(-35%);
             }
         }
 

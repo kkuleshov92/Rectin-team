@@ -39,13 +39,9 @@
         padding-left: 29px;
         line-height: 1.2;
         
-        a {
+        span {
             text-decoration: underline;
             color: #000;
-
-            &:hover {
-                text-decoration: none;
-            }
         }
     }
 

@@ -117,6 +117,18 @@
     }
 }
 
+@media screen and (min-width:0\0) {
+    .kind {
+        &__top {
+            padding-top: 27px;
+            
+            &_3 {
+                padding-top: 15px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1219px) {
     .kind {
         &__item {

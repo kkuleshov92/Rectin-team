@@ -1,15 +1,3 @@
-// {
-//     window.addEventListener('resize', function () {
-//         if (window.innerWidth < 1024) {
-//             $('.reviews__list').slick({
-//                 slidesToShow: 2
-//             });
-//         }
-//     });
-// }
-
-
-
 {
     let slider1 = $('.reviews__list');
 
@@ -41,13 +29,21 @@
                 infinite: true,
                 adaptiveHeight: true,
                 variableWidth: true,
-                responsive: [
-                    {
-                        breakpoint: 767,
+                responsive: [{
+                        breakpoint: 768,
                         settings: {
                             slidesToShow: 1,
                             variableWidth: false,
                             adaptiveHeight: false
+                        }
+                    },
+                    {
+                        breakpoint: 639,
+                        settings: {
+                            centerMode: true,
+                            slidesToShow: 1,
+                            adaptiveHeight: false,
+                            centerPadding: '80px'
                         }
                     }
                 ]
@@ -58,4 +54,23 @@
     };
     showSlider();
     $(window).on('resize', showSlider);
+}
+
+
+{
+    let reviewsArea = document.querySelector('.reviews__textarea'),
+        reviewsBtn = document.querySelector('.reviews__btn'),
+        thanksBox = document.querySelector('.thanks-box'),
+        thanksClose = document.querySelector('.thanks__close');
+
+    reviewsBtn.addEventListener('click', function () {
+        if (reviewsArea.value) {
+            thanksBox.style.display = 'block';
+        }
+    });
+
+    thanksClose.addEventListener('click', function () {
+        thanksBox.style.display = 'none';
+        reviewsArea.value = '';
+    });
 }

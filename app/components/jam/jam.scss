@@ -26,6 +26,7 @@
             position: absolute;
             right: -174px;
             border-radius: 0 0 55px 0;
+            top: 0;
         }
 
         &::after {
@@ -35,6 +36,7 @@
             height: 60px;
             width: 100%;
             right: 100%;
+            top: 0;
         }
     }
 
@@ -61,7 +63,7 @@
         font-size: 18px;
         color: #000;
         display: inline-block;
-        border-bottom: 1px dotted #000;
+        border-bottom: 2px dotted #000;
         line-height: 26px;
         transition: .3s;
 
